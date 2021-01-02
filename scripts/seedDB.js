@@ -12,7 +12,7 @@ const lightsSeed = [
     },
     {
         place_id: "[1]",
-        street_address: "1001 Ash Circle, La Vegne, Tennessee 37127"
+        street_address: "1001 Ash Circle, La Vegne, Tennessee 37086"
     },
     {
         place_id: "[2]",
@@ -20,7 +20,7 @@ const lightsSeed = [
     },
     {
         place_id: "[3]",
-        street_address: "1390 Neil RD, Chapple Hill, Tennessee "
+        street_address: "1390 Neil RD, Chapple Hill, Tennessee 37034"
     },
     {
         place_id: "[4]",
