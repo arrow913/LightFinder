@@ -9,8 +9,8 @@ export default {
     return axios.get("/api/address/" + id);
   },
   
-  deleteAddress: function(id) {
-    return axios.delete("/api/address/" + id);
+  addAddress: function(id) {
+    return axios.add("/api/address/" + id);
   },
  
   saveAddres: function(addressData) {

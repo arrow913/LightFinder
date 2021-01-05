@@ -17,6 +17,16 @@ app.use(routes);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+module.exports = {
+  mode: "modules",
+  target: "es6",
+  out: "docs",
+  exclude: ["**/node_modules/**", "**/*.spec.ts", "**/*.test.ts", "dist"],
+  name: "Google Maps Services Node Client",
+  ignoreCompilerErrors: false,
+  module: "commonjs",
+  readme: "./README.md"
+};
