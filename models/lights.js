@@ -1,13 +1,12 @@
 const mongoose = require("mongoose");
-const { stringify } = require("querystring");
 const Schema = mongoose.Schema;
 
 const lightsSchema = new Schema({
- place_id: {type: [], required: true},
- street_address: {type: stringify, required: true}
+ place_id: {type: Number, required: "Place id required. "},
+ street_address: {type: String, required: "Street address required. "}
  
 });
 
-const lights = mongoose.model("Lights", lightsSchema);
+const Lights = mongoose.model("Lights", lightsSchema);
 
 module.exports = Lights;
