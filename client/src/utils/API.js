@@ -2,18 +2,19 @@ import axios from "axios";
 
 export default {
  
-  getAddress: function() {
-    return axios.get("/api/address");
-  },
-  getAddress: function(id) {
-    return axios.get("/api/address/" + id);
+  getLights: function() {
+    return axios.get("/api/lights");
   },
   
-  addAddress: function(id) {
-    return axios.add("/api/address/" + id);
+  loadLights: function(id) {
+    return axios.post("/api/lights/");
+  },
+  
+  addLights: function(id) {
+    return axios.add("/api/lights/");
   },
  
-  saveAddres: function(addressData) {
-    return axios.post("/api/address", addressData);
+  saveLights: function() {
+    return axios.insert("../lights/seedDB");
   }
 };

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import AddBtn from "../components/AddBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, FormBtn } from "../components/Form";
 
-function Books() {
-  const [lights, setLights] = useState([])
+
+function Lights() {
+  const [lights, setLights, ] = useState([])
   const [formObject, setFormObject] = useState({})
 
   useEffect(() => {
@@ -22,44 +22,46 @@ function Books() {
       )
       .catch(err => console.log(err));
   };
-
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({...formObject, [name]: value})
   };
 
-  function handleFormSubmit(event) {
-    event.preventDefault();
+
+        function handleFormSubmit(event) {
+    // event.preventDefault();
     if (formObject.place_id && formObject.street_address) {
       API.saveLights({
         place_id: formObject.place_id,
         street_address: formObject.street_address,
+        _date: new Date(Date.now())
       })
-        .then(res => loadLights())
+        .then(res => setLights(res.data))
         .catch(err => console.log(err));
     }
   };
-
+// console.log (Lights)
     return (
       <Container fluid>
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>Where are the Lights ?</h1>
+              <h1>Dancing Lights</h1>
             </Jumbotron>
             <form>
               <Input
                 onChange={handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="Email"
+                placeholder="Email (required)"
               />
               <Input
                 onChange={handleInputChange}
-                name="street_address"
-                placeholder="street_address (required)"
+                name="Street Address"
+                placeholder="Street Address (required)"
               />
+              
               <FormBtn
-                disabled={!(formObject.street_address && formObject.place_id)}
+                // disabled={!(Email)}
                 onClick={handleFormSubmit}
               >
                  Lights
@@ -68,7 +70,7 @@ function Books() {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Dancing Lights</h1>
+              <h1>Where are the Lights?</h1>
             </Jumbotron>
             {lights.length ? (
               <List>
@@ -76,10 +78,10 @@ function Books() {
                   <ListItem key={lights._id}>
                     <Link to={"/lights/" + lights._id}>
                       <strong>
-                        {lights.place_id} by {lights.street_address}
+                        {lights.place_id} - {lights.street_address}
                       </strong>
                     </Link>
-                    <AddBtn onClick={() => addLights(lights._id)} />
+                 
                   </ListItem>
                 ))}
               </List>

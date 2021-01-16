@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -28,13 +28,13 @@ mongoose.connect(
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
-module.exports = {
-  mode: "modules",
-  target: "es6",
-  out: "docs",
-  exclude: ["**/node_modules/**", "**/*.spec.ts", "**/*.test.ts", "dist"],
-  name: "Google Maps Services Node Client",
-  ignoreCompilerErrors: false,
-  module: "commonjs",
-  readme: "./README.md"
-};
+// module.exports = {
+//   mode: "modules",
+//   target: "es6",
+//   out: "docs",
+//   exclude: ["**/node_modules/**", "**/*.spec.ts", "**/*.test.ts", "dist"],
+//   name: "Google Maps Services Node Client",
+//   ignoreCompilerErrors: false,
+//   module: "commonjs",
+ 
+// };
