@@ -21,7 +21,7 @@ function Detail(props) {
         <Col size="md-12">
           <Jumbotron>
             <h1>
-              {lights.place_id} by {lights.street_address}
+              {lights.place_id} - {lights.street_address}
             </h1>
           </Jumbotron>
         </Col>

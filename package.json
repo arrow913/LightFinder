@@ -20,9 +20,12 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.1.15",
     "axios": "^0.18.0",
     "express": "^4.16.3",
+    "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-    "if-env": "^1.0.4"
+    "@iconify/icons-mdi": "^1.0.105",
+    "@iconify/react": "^1.1.3"
   }
 }

@@ -5,8 +5,7 @@ router.route("/")
   .get(lightsController.findAll)
   .post(lightsController.create);
 
-router
-  .route("/:id")
+router.route("/")
   .get(lightsController.findById)
   .put(lightsController.update)
   

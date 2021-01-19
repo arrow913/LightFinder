@@ -6,15 +6,15 @@ export default {
     return axios.get("/api/lights");
   },
   
-  loadLights: function(id) {
+  loadLights: function() {
     return axios.post("/api/lights/");
   },
   
-  addLights: function(id) {
+  addLights: function() {
     return axios.add("/api/lights/");
   },
  
-  saveLights: function() {
-    return axios.insert("../lights/seedDB");
+  saveLights: function(lightData) {
+    return axios.post("/api/lights", lightData);
   }
 };
