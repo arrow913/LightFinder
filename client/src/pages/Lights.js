@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, FormBtn } from "../components/Form";
-
+import MapSection from '../components/map/Map'
 
 function Lights() {
   const [lights, setLights,] = useState([])
@@ -32,7 +32,9 @@ function Lights() {
     // event.preventDefault();
     console.log(formObject)
     API.saveLights({
-      street_address: formObject.street_address
+      street_address: formObject.street_address,
+      lat:formObject.lat,
+      long:formObject.long
     })
       .then(res =>console.log(res))
       .catch(err => console.log(err));
@@ -57,6 +59,17 @@ function Lights() {
               name="street_address"
               placeholder="Street Address (required)"
             />
+            <Input
+              onChange={handleInputChange}
+              name="lat"
+              placeholder="lat (required)"
+            />
+            <Input
+              onChange={handleInputChange}
+              name="long"
+              placeholder="long (required)"
+            />
+
 
             <FormBtn
               disabled={ !(/^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,})$/.test(credentials.email)) }  
@@ -88,6 +101,7 @@ function Lights() {
             )}
         </Col>
       </Row>
+      <MapSection lights={lights} zoomLevel={10} />
     </Container>
   );
 }

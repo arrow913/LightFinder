@@ -11,21 +11,25 @@ const LocationPin = ({ text }) => (
   </div>
 )
 
-const Map = ({ location, zoomLevel }) => (
+const Map = ({ lights, zoomLevel }) => (
   <div className="map">
     <h2 className="map-h2">Come Visit The Lights</h2>
 
     <div className="google-map">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: '' }}
-        defaultCenter={location}
+        bootstrapURLKeys={{ key: 'AIzaSyBXqq-1Jq6i0QYq7-il5NRvUVldtNq0R-A' }}
+        center={{
+            lat: 35.57429,
+            lng: -86.57479
+        }}
         defaultZoom={zoomLevel}
       >
+        {lights.map(light => (
         <LocationPin
-          lat={location.lat}
-          lng={location.lng}
-          text={location.address}
-        />
+          lat={light.lat}
+          lng={light.long}
+          text={light.street_address}
+        />))}
       </GoogleMapReact>
     </div>
   </div>
