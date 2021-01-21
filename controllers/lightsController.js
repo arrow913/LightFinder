@@ -6,7 +6,10 @@ module.exports = {
       .find(req.query)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch(err => {
+        
+        console.log (err);
+        res.status(422).json(err)});
   },
   findById: function(req, res) {
     db.Lights
@@ -18,7 +21,9 @@ module.exports = {
     db.Lights
       .create({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch(err => {
+        console.log (err);
+        res.status(422).json(err)});
   },
   update: function(req, res) {
     db.Lights
