@@ -1,5 +1,5 @@
 # LightFinder
- ![readme screenshot](/ScreenShot1.png)
+ ![readme screenshot](/Users/billyarrasmith/LightFinder/images/ScreenShot1.png)
 # Overveiw
 
 This app was built to track and add to personal Christmas Lights .It allows users to look up houses near by. 
@@ -15,7 +15,7 @@ on Google Maps , it also allows users to add their favorite places to look at li
 
 # Deployed 
 
-Heoku: [url](https://dashboard.heroku.com/apps/desolate-island-57465)
+Heoku: [url](https://desolate-island-57465.herokuapp.com/)
 
 # Process 
 
