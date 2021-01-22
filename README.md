@@ -1,5 +1,5 @@
 # LightFinder
- ![readme screenshot](/Users/billyarrasmith/LightFinder/images/ScreenShot1.png)
+ ![readme screenshot](images/ScreenShot1.png)
 # Overveiw
 
 This app was built to track and add to personal Christmas Lights .It allows users to look up houses near by. 
