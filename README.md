@@ -7,11 +7,16 @@ on Google Maps , it also allows users to add their favorite places to look at li
 
 # Technologies
 
-* React.js
-* Mongo
-* Node.js
-* Google Maps
-* Giphy
+* React.js.
+
+* Mongo.
+
+* Node.js.
+
+* Google Maps.
+
+* Giphy.
+
 
 # Deployed 
 
