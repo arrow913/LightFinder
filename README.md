@@ -15,7 +15,7 @@ on Google Maps , it also allows users to add their favorite places to look at li
 
 # Deployed 
 
-Heoku: [url](https://desolate-island-57465.herokuapp.com/)
+Heoku: [LightFinder](https://desolate-island-57465.herokuapp.com/)
 
 # Process 
 
