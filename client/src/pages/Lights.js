@@ -43,10 +43,14 @@ function Lights() {
   // console.log (Lights)
   return (
     <Container fluid>
-      <Row>
+      <Row> 
         <Col size="md-6">
-          <Jumbotron>
-            <h1>Dancing Lights</h1>
+        
+          <Jumbotron>  
+         <div> 
+           <img src = "https://media.giphy.com/media/3otPoS81loriI9sO8o/giphy.gif" alt="img"></img>
+            <h1>Dancing Lights </h1> 
+            </div>        
           </Jumbotron>
           <form>
             <Input
@@ -81,7 +85,10 @@ function Lights() {
         </Col>
         <Col size="md-6 sm-12">
           <Jumbotron>
+            <div>
+            <img src = "https://media.giphy.com/media/xUPOqAV1uEEskAX6gw/giphy.gif" alt="ima" ></img>
             <h1>Where are the Lights?</h1>
+            </div>
           </Jumbotron>
           {lights.length ? (
             <List>

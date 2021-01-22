@@ -4,9 +4,12 @@ import axios from "axios";
 const lights = {
   method: 'GET',
   // url: 'https://google-maps-geocoding.p.rapidapi.com/geocode/json',
-   url: "https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+   url: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBXqq-1Jq6i0QYq7-il5NRvUVldtNq0R-A&callback=initMap"
  
- 
+  // headers: {
+  //   'x-rapidapi-key': 'AIzaSyBXqq-1Jq6i0QYq7-il5NRvUVldtNq0R-A'
+    
+  // }
 };
 
 axios.request(lights).then(function (response) {
