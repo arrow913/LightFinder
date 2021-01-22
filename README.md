@@ -24,9 +24,11 @@ Heoku: [LightFinder](https://desolate-island-57465.herokuapp.com/)
 
 # Process 
 
-React: for the front end.
-Mongoose: for the backend.
-Deployed: Heroku.
+* React: for the front end.
+
+* Mongoose: for the backend.
+
+* Deployed: Heroku.
 
 # Created by
 
