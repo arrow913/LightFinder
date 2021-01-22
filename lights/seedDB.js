@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 mongoose.connect(
-    process.env.MONGODDB_URI ||
+    process.env.MONGOD_URl ||
     "mongodb://localhost/lights"
 );
 const lightsSeed = [
